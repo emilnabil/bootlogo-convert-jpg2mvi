@@ -5,13 +5,18 @@ opkg update && opkg install ffmpeg
 wait
 cd /tmp
 ffmpeg -i bootlogo.jpg -r 25 -b 20000 bootlogo.m1v
+wait
+sleep 2;
 mv bootlogo.m1v bootlogo.mvi
 wait
 ffmpeg -i backdrop.jpg -r 25 -b 20000 backdrop.m1v
+wait
+sleep 2;
 mv backdrop.m1v backdrop.mvi
 cp /tmp/bootlogo.mvi /usr/share/bootlogo.mvi
 wait
 cp /tmp/backdrop.mvi /usr/share/backdrop.mvi
+sleep 2;
 wait
 rm -f /tmp/*.jpg
 rm -f /tmp/*.mvi
